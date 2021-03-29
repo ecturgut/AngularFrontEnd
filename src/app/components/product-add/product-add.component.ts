@@ -36,6 +36,7 @@ export class ProductAddComponent implements OnInit {
   }
 
   add(){
+    console.log(this.productAddForm.value)
     if(this.productAddForm.valid){
       let productModel = Object.assign({},this.productAddForm.value)
       this.productService.add(productModel).subscribe(response=>{
